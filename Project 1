@@ -1,0 +1,18 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, Color TEXT, Aisle INTEGER, rating INTEGER);
+
+INSERT INTO store VALUES(1, "Tank", 5, "Blue", 1, 3);
+INSERT INTO store VALUES(2, "Panties", 10, "Yellow", 2, 1);
+INSERT INTO store VALUES(3, "Beanie", 18, "Green", 3, 2);
+INSERT INTO store VALUES(4, "Socks", 52, "Purple", 2, 4);
+INSERT INTO store VALUES(5, "Boots", 6, "Blue", 5, 5);
+INSERT INTO store VALUES(6, "High Heels", 76, "Teel", 3, 1);
+INSERT INTO store VALUES(7, "Sneakers", 21, "Red", 2, 2);
+INSERT INTO store VALUES(8, "Cleats", 30, "Black", 1, 4);
+INSERT INTO store VALUES(9, "Sunglasses", 7, "White", 5, 5);
+INSERT INTO store VALUES(10, "Earrings", 3, "Grey", 4, 2);
+INSERT INTO store VALUES(11, "Jeans", 22, "Pink", 2, 1);
+INSERT INTO store VALUES(12, "Shorts", 89, "Orange", 1, 2);
+INSERT INTO store VALUES(13, "Gloves", 90, "Brown", 4, 1);
+INSERT INTO store VALUES(14, "Coat", 100, "Tan", 4, 4);
+INSERT INTO store VALUES(15, "Scarf", 21, "Magenta", 4, 5);
+SELECT item, color FROM store ORDER BY PRICE DESC;
