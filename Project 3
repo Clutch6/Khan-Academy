@@ -1,0 +1,42 @@
+CREATE TABLE singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    nationality TEXT,
+    travel_buddy INTEGER);
+    
+INSERT INTO singers (fullname, nationality, travel_buddy) VALUES ("John Legend", "US", "Sam Smith");
+INSERT INTO singers (fullname, nationality, travel_buddy) VALUES ("Sam Smith", "UK", "John Legend");
+INSERT INTO singers (fullname, nationality, travel_buddy) VALUES ("Bob Marley", "Jamaica", "Iggy Azelea");
+INSERT INTO singers (fullname, nationality, travel_buddy) VALUES ("Iggy Azelea", "Aus", "Bob Marley");
+INSERT INTO singers (fullname, nationality, travel_buddy) VALUES ("Katy Perry", "US", "nobody");
+
+CREATE table hits (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    singers_id INTEGER,
+    top_hit TEXT);
+    
+INSERT INTO hits (singers_id, top_hit) VALUES (1, "All of Me");
+INSERT INTO hits(singers_id, top_hit) VALUES (2, "Too God at Goodbyes");
+INSERT INTO hits (singers_id, top_hit) VALUES (3, "One Love");
+INSERT INTO hits (singers_id, top_hit) VALUES (4, "Fancy");
+INSERT INTO hits (singers_id, top_hit) VALUES (5, "Fireworks");
+
+CREATE table bankroll(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    money TEXT,
+    bank TEXT);
+ 
+INSERT INTO bankroll (money, bank) VALUES (1, "1 million",  "PNC");
+INSERT INTO bankroll(money, bank) VALUES (2, "8 billion", "Navy Fed");
+INSERT INTO bankroll (money, bank) VALUES (3, "40 trillion",  "Caymans");
+INSERT INTO bankroll(money, bank) VALUES (4, "3 million", "Bank of America");
+INSERT INTO bankroll (money, bank ) VALUES (5, "55 million", "SECU");   
+
+/*Return top hit for each singer*/
+SELECT singers.fullname, hits.top_hit
+FROM singers
+JOIN hits
+ON singers.id = hits.singers_id;
+
+
+
