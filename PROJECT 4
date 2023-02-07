@@ -1,0 +1,20 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE girlfriends (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    job TEXT,
+    date TEXT);
+
+INSERT INTO girlfriends (name, job, date) VALUES ("Rena", "Trainer", "Hiking");
+INSERT INTO girlfriends (name, job, date) VALUES ("Shayna", "Gymnast", "Trampoline Park");
+INSERT INTO girlfriends (name, job, date) VALUES ("Danielle", "Accountant", "Escape Room");
+INSERT INTO girlfriends (name, job, date) VALUES ("Debbie", "Swimmer", "Beach");
+
+UPDATE girlfriends set name = "Diana"
+WHERE id = 3;
+
+DELETE FROM girlfriends 
+WHERE id = 4;
+
+
