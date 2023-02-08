@@ -1,2 +1,2 @@
-# Khan-Academy
-Khan Academy Project 
+# SQL-Projects
+SQL Projects
